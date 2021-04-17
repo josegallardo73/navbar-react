@@ -1,22 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './Components/Navbar'
+import ItemListContainer from './Components/container/ItemListContainer'
 function App() {
+  const categorias = ["Novedades", "Mas vendidos", "Bajan de precio", "Próximos lanzamientos"]
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <Navbar categorias={categorias}/>
+          <ItemListContainer catalogo = "Catálogo de Videojuegos"/>
       </header>
     </div>
   );
